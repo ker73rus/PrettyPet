@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "811597405873",
+    "project_id": "prettypet-b4796",
+    "storage_bucket": "prettypet-b4796.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811597405873:android:ba9a7d7583de7f28988c90",
+        "android_client_info": {
+          "package_name": "com.example.prettypet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXE-Xe0Ud73LjacKN_f3VeP6ylCPFsWS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66D1CB"
+    android:orientation="vertical"
+    tools:context=".RegistrationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добро пожаловать в"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"
+        android:fontFamily="@font/pressstart2p_regular"
+        android:textAlignment="center"
+        android:textColor="#EBBA3B"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PrettyPet"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/pressstart2p_regular"
+        android:textAlignment="center"
+        android:textColor="#EBBA3B"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        android:fontFamily="@font/pressstart2p_regular"
+        android:textAlignment="center"
+        android:textColor="#EBBA3B"
+        android:textSize="20sp"
+        android:layout_marginTop="90dp"/>
+
+    <TextView
+        android:id="@+id/labelphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/pressstart2p_regular"
+        android:text="номер телефона"
+        android:textAlignment="center"
+        android:textColor="#7E010000"
+        android:textSize="11sp" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext"
+        android:ems="10"
+        android:inputType="phone" />
+    <TextView
+        android:id="@+id/labelpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/pressstart2p_regular"
+        android:text="пароль"
+        android:textAlignment="center"
+        android:textColor="#7E010000"
+        android:textSize="11sp"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext"
+        android:ems="10"
+        android:inputType="numberPassword"
+        android:visibility="invisible"/>
+
+
+
+    <Button
+        android:id="@+id/registrationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:text="у меня есть аккаунт"
+        android:textColor="#000000"
+        android:layout_marginTop="25dp"/>
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#61DE6E"
+        android:fontFamily="@font/pressstart2p_regular"
+        android:gravity="center"
+        android:text="продолжить"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+</LinearLayout>
