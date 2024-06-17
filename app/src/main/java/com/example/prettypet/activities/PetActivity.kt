@@ -1,12 +1,11 @@
-package com.example.prettypet
+package com.example.prettypet.activities
 
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.prettypet.models.Note
 import com.example.prettypet.databinding.ActivityPetBinding
 import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat

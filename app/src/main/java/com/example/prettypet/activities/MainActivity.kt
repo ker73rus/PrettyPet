@@ -1,12 +1,12 @@
-package com.example.prettypet
+package com.example.prettypet.activities
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
+import com.example.prettypet.fragments.ClinicFragment
+import com.example.prettypet.fragments.EventFragment
+import com.example.prettypet.fragments.HomeFragment
+import com.example.prettypet.R
 
 import com.example.prettypet.databinding.ActivityMainBinding
 

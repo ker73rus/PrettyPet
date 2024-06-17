@@ -1,26 +1,26 @@
-package com.example.prettypet
+package com.example.prettypet.fragments
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.example.prettypet.GlobalStuff
+import com.example.prettypet.models.Pet
+import com.example.prettypet.R
+import com.example.prettypet.activities.PetActivity
 import com.example.prettypet.databinding.FragmentHomeBinding
-import com.google.android.gms.common.api.GoogleApi
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.toObject
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
-    val kittens = intArrayOf(R.drawable.kitten_1,R.drawable.kitten_2,R.drawable.kitten_3,R.drawable.kitten_4)
+    val kittens = intArrayOf(
+        R.drawable.kitten_1,
+        R.drawable.kitten_2,
+        R.drawable.kitten_3,
+        R.drawable.kitten_4
+    )
     var cur_kitten = 0
     var userCats : ArrayList<Pet> = ArrayList()
     var kittensId : ArrayList<String> = ArrayList()
@@ -30,7 +30,6 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
     }
-
     fun showCloseCreate(show : Boolean){
         if(show){
             binding.createPetConfirm.visibility = View.VISIBLE
@@ -67,9 +66,15 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        db.collection("pet").whereEqualTo("owner",GlobalStuff.user).get().addOnSuccessListener {
+        db.collection("pet").whereEqualTo("owner", GlobalStuff.user).get().addOnSuccessListener {
             for(p in it){
-                userCats.add(Pet(p.data.get("name").toString(),p.data.get("icon").toString().toInt(),p.data.get("owner").toString()))
+                userCats.add(
+                    Pet(
+                        p.data.get("name").toString(),
+                        p.data.get("icon").toString().toInt(),
+                        p.data.get("owner").toString()
+                    )
+                )
                 kittensId.add(p.id)
             }
 
@@ -130,16 +135,22 @@ class HomeFragment : Fragment() {
             val name  = binding.editTextName.text.toString()
             if (name != "")
             {
-                db.collection("pet").add(Pet(name,cur_kitten,GlobalStuff.user)).addOnCompleteListener() {
+                db.collection("pet").add(Pet(name, cur_kitten, GlobalStuff.user)).addOnCompleteListener() {
                     binding.editTextName.text.clear()
                     cur_kitten = 0
-                    db.collection("pet").whereEqualTo("owner",GlobalStuff.user).get().addOnSuccessListener {
+                    db.collection("pet").whereEqualTo("owner", GlobalStuff.user).get().addOnSuccessListener {
                         for(p in it){
-                            userCats.add(Pet(p.data.get("name").toString(),p.data.get("icon").toString().toInt(),p.data.get("owner").toString()))
+                            userCats.add(
+                                Pet(
+                                    p.data.get("name").toString(),
+                                    p.data.get("icon").toString().toInt(),
+                                    p.data.get("owner").toString()
+                                )
+                            )
                         }
                         showKittens()
                         showCloseCreate(false)
-                        Toast.makeText(context,"Питомец создан", Toast.LENGTH_LONG).show()
+                        Toast.makeText(context, "Питомец создан", Toast.LENGTH_LONG).show()
                     }
 
                 }

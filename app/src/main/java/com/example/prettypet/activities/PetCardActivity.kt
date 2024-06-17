@@ -1,4 +1,4 @@
-package com.example.prettypet
+package com.example.prettypet.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

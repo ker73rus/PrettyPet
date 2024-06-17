@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#66D1CB"
     android:orientation="vertical"
-    tools:context=".RegistrationActivity">
+    tools:context=".activities.RegistrationActivity">
 
     <TextView
         android:layout_width="match_parent"

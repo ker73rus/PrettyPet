@@ -1,4 +1,4 @@
-package com.example.prettypet
+package com.example.prettypet.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.prettypet.GlobalStuff
+import com.example.prettypet.R
 import com.example.prettypet.databinding.ActivityLoginBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
