@@ -30,10 +30,9 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="#EBBA3B"
         android:fontFamily="@font/pressstart2p_regular"
-        android:text="Создать питомца"
+        android:text="Сделать запись"
         android:textColor="#135854"
         android:textSize="11sp"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,4 +100,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.822" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="259dp"
+        android:layout_height="287dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:fontFamily="@font/pressstart2p_regular"
+        android:gravity="center_horizontal"
+        android:inputType="text"
+        android:text="Name"
+        android:textColor="#EAB93B"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

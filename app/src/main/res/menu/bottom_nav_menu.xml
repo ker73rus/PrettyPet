@@ -10,6 +10,10 @@
         android:icon="@drawable/ic_home"
         android:title="" />
     <item
+        android:id="@+id/navigation_event"
+        android:icon="@drawable/ic_events"
+        android:title="" />
+    <item
         android:id="@+id/navigation_clinic"
         android:icon="@drawable/ic_clinic"
         android:title="" />

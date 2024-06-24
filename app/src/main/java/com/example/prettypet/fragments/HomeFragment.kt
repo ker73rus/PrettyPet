@@ -173,7 +173,7 @@ class HomeFragment : Fragment() {
             binding.imageView.setImageResource(kittens[cur_kitten])
         }
         binding.imageView2.setOnClickListener {
-            GlobalStuff.curKitten = kittensId[curCat].toString()
+            GlobalStuff.curKitten = kittensId[curCat]
             val intent = Intent(this.context, PetActivity::class.java)
             startActivity(intent)
         }

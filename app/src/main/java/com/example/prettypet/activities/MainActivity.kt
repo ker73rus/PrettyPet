@@ -9,6 +9,7 @@ import com.example.prettypet.fragments.HomeFragment
 import com.example.prettypet.R
 
 import com.example.prettypet.databinding.ActivityMainBinding
+import com.example.prettypet.fragments.ManualFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -21,8 +22,9 @@ class MainActivity : AppCompatActivity() {
             binding.bottomNavigationView.setOnItemSelectedListener {
                 when (it.itemId){
                     R.id.navigation_home -> replaceFragment(HomeFragment())
-                    R.id.navigation_manual -> replaceFragment(EventFragment())
+                    R.id.navigation_manual -> replaceFragment(ManualFragment())
                     R.id.navigation_clinic -> replaceFragment(ClinicFragment())
+                    R.id.navigation_event -> replaceFragment(EventFragment())
                 }
                 true
             }

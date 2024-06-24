@@ -5,29 +5,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.prettypet.R
+import com.example.prettypet.adapter.ManualAdapter
+import com.example.prettypet.databinding.FragmentManualBinding
 
 class ManualFragment : Fragment() {
+    lateinit var binding: FragmentManualBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_manual, container, false)
+        binding = FragmentManualBinding.inflate(inflater)
+        val adapter = context?.let { ManualAdapter(it) }
+        binding.rec.layoutManager = LinearLayoutManager(context)
+        binding.rec.adapter = adapter
+
+        return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ManualFragment().apply {
-                arguments = Bundle().apply {
-                }
-            }
-    }
 }

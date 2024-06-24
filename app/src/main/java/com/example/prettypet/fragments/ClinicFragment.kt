@@ -5,7 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.prettypet.R
+import com.example.prettypet.adapter.ClinicAdapter
+import com.example.prettypet.adapter.ManualAdapter
+import com.example.prettypet.databinding.FragmentClinicBinding
+import com.example.prettypet.databinding.FragmentManualBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -14,6 +19,7 @@ import com.example.prettypet.R
  */
 class ClinicFragment : Fragment() {
     // TODO: Rename and change types of parameters
+    lateinit var binding: FragmentClinicBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,23 +29,12 @@ class ClinicFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_clinic, container, false)
+        binding = FragmentClinicBinding.inflate(inflater)
+        val adapter = context?.let { ClinicAdapter(it) }
+        binding.rec.layoutManager = LinearLayoutManager(context)
+        binding.rec.adapter = adapter
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ClinicFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ClinicFragment().apply {
-            }
-    }
 }
